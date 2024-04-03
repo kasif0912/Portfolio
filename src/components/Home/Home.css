@@ -1,0 +1,199 @@
+.section {
+  padding: 4rem 0 2rem;
+  /* border: 1px solid red; */
+}
+
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+.button--flex {
+  display: inline-block;
+  align-items: center;
+}
+
+.home_content {
+  grid-template-columns: 116px repeat(2, 1fr);
+  padding-top: 5.5rem;
+  column-gap: 2rem;
+  align-items: center;
+}
+.home_social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.home_social-icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+.home_social-icon:hover {
+  color: var(--title-color-dark);
+}
+.home_title {
+  font-size: var(--big-font-size);
+  margin-bottom: 0.25rem;
+}
+.home_hand {
+  width: 38px;
+  height: 38px;
+  margin-left: 0.4rem;
+}
+.home_subtitle {
+  position: relative;
+  font-size: 1.25rem;
+  padding-left: 5.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.home_subtitle::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: var(--text-color);
+  left: 0;
+  top: 1rem;
+}
+.home_description {
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+.home_img {
+  background: url(../../assets/kasif1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* box-shadow: inset 0 0 0 9px rgb(255 255 255/ 30%); */
+  order: 1;
+  justify-self: center;
+  width: 300px;
+  height: 300px;
+  animation: profile_animate 8s ease-in-out infinite 1s;
+}
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+}
+
+.home_scroll {
+  margin-left: 9.25rem;
+}
+.wheel {
+  animation: scroll 2s ease infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(3.75rem);
+  }
+}
+.home_scroll-name {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-right: 0.25rem;
+  margin-left: 2px;
+}
+.home_scroll-arrow {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+  .home_content {
+    grid-template-columns: 100px repeat(2, 1fr);
+    column-gap: 1.25rem;
+  }
+  .home_hand {
+    width: 26px;
+    height: 26px;
+  }
+  .home_subtitle {
+    padding-left: 3.75rem;
+    margin-bottom: 1rem;
+  }
+  .home_subtitle::before {
+    width: 42px;
+    top: 0.8rem;
+  }
+  .home_description {
+    max-width: initial;
+    margin-bottom: 2.5rem;
+  }
+  .home img {
+    width: 250px;
+    height: 250px;
+    box-shadow: inset 0 0 0 8px rgb(255 255 255/ 30%);
+  }
+  .home_scroll {
+    margin-left: 7.5rem;
+  }
+}
+/* for medium devices */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 4rem 2rem;
+  }
+  .home_content {
+    /* border: 1px solid red; */
+    grid-template-columns: 0.5fr 3fr;
+  }
+  .home_img {
+    order: initial;
+    justify-self: initial;
+    /* background-color: rosybrown; */
+  }
+  .home_social {
+    padding-left: 10px;
+  }
+
+  .home_data {
+    grid-column: 1/3;
+    padding-top: 40px;
+    padding-left: 35px;
+  }
+  .home_img {
+    box-shadow: inset 0 0 0 6px rgb(255 255 255/30%);
+    width: 200px;
+    height: 200px;
+    margin-left: 3px;
+  }
+  .home_scroll {
+    display: none;
+  }
+}
+/* for small devices */
+@media screen and (max-width: 350px) {
+  .home_img {
+    width: 180px;
+    height: 180px;
+  }
+  .home_hand {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -1,0 +1,96 @@
+.skills_section {
+  /* border: 1px solid red; */
+  margin: 1.5rem 1.5rem;
+}
+.skill_title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+.skill_subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+.skill_title,
+.skill_subtitle {
+  text-align: center;
+}
+.container1 {
+}
+.grid1 {
+  display: grid;
+}
+
+.skills_container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  /* grid-template-columns: repeat(2, 350px); */
+  /* column-gap: 3rem; */
+  /* justify-content: center; */
+}
+.skills_content {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3rem 3rem;
+  border-radius: 1.25rem;
+}
+.skills_title {
+  font-size: var(--norm) al-font-size;
+  font-weight: var(--font-nedium);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.skills_box {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+.skills_group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+.skills_data {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.bx-badge-check {
+  font-size: 1rem;
+  color: var(--title-color);
+}
+.skills_name {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  .skills_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-content{
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills_box {
+    column-gap: 1.25rem;
+  }
+  .skills-name{
+    font-size: var(--small-font-size);
+  }
+}
