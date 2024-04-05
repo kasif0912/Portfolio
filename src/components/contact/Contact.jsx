@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ScrollReveal from "scrollreveal";
+
 
 const Contact = () => {
   // const ref = useRef();
@@ -36,6 +38,22 @@ const Contact = () => {
         }
       );
   };
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "left",
+      distance: "500px",
+      duration: 1000,
+      reset: true,
+    });
+
+    sr.reveal(".text_container h1", { delay: 200 });
+    sr.reveal(".item", { delay: 200 });
+    sr.reveal("button", { delay: 600 });
+    sr.reveal("form", { delay: 600 });
+    // sr.reveal(".home_description", { delay: 400 });
+    // sr.reveal(".button", { delay: 600 });
+  });
   return (
     <div className="contact_section" id="contact">
       <div className="text_container">

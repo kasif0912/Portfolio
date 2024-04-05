@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Qualification.css";
+import ScrollReveal from "scrollreveal";
 
 const Qualification = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -7,6 +8,19 @@ const Qualification = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "left",
+      distance: "20px",
+      duration: 1000,
+      reset: true,
+    });
+
+    // sr.reveal(".qualification_detail", { delay: 200 });
+    sr.reveal(".qualification_container", { delay: 200 });
+    sr.reveal(".qualification_button", { delay: 200 });
+  });
   return (
     <div className="qualification_section">
       {/* title and subtitle */}
@@ -54,7 +68,9 @@ const Qualification = () => {
           >
             <div className="qualification_data">
               <div>
-                <h3 className="qualification_tit">NRI Institute of Information Science and technology</h3>
+                <h3 className="qualification_tit">
+                  NRI Institute of Information Science and technology
+                </h3>
                 <span className="qualification_sub">Bhopal, MP</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>2024 - Present
@@ -76,10 +92,10 @@ const Qualification = () => {
               </div>
 
               <div>
-                <h3 className="qualification_tit">DAV Centenary Public School</h3>
-                <span className="qualification_sub">
-                 Baniahir, Dhanbad JH
-                </span>
+                <h3 className="qualification_tit">
+                  DAV Centenary Public School
+                </h3>
+                <span className="qualification_sub">Baniahir, Dhanbad JH</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>2018 - 2020
                 </div>
@@ -89,9 +105,7 @@ const Qualification = () => {
             <div className="qualification_data">
               <div>
                 <h3 className="qualification_tit">Jitpur Academy</h3>
-                <span className="qualification_sub">
-                 Jitpur, Dhanbad JH
-                </span>
+                <span className="qualification_sub">Jitpur, Dhanbad JH</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>2009 - 2018
                 </div>
@@ -115,7 +129,9 @@ const Qualification = () => {
           >
             <div className="qualification_data">
               <div>
-                <h3 className="qualification_tit">Frontend Developer(Intern)</h3>
+                <h3 className="qualification_tit">
+                  Frontend Developer(Intern)
+                </h3>
                 <span className="qualification_sub">Hiremi - Bhopal</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>July 2022 - Oct 2022
@@ -137,15 +153,17 @@ const Qualification = () => {
               </div>
 
               <div>
-                <h3 className="qualification_tit">Frontend Developer(Intern)</h3>
-                <span className="qualification_sub">LeopardsRuns Innovation & Technology - Bhopal </span>
+                <h3 className="qualification_tit">
+                  Frontend Developer(Intern)
+                </h3>
+                <span className="qualification_sub">
+                  LeopardsRuns Innovation & Technology - Bhopal{" "}
+                </span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>Aug 2023- Sep 2023
                 </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>

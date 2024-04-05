@@ -1,6 +1,18 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 const Data = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "left",
+      distance: "500px",
+      duration: 1000,
+      reset: true,
+    });
+
+    sr.reveal(".home_data", { delay: 200 });
+    sr.reveal(".home_description", { delay: 400 });
+    sr.reveal(".button", { delay: 600 });
+  });
   return (
     <div className="home_data">
       <h1 className="home_title">

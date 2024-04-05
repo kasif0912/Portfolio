@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 import AboutImg from "../../assets/kasif4.jpeg";
+import ScrollReveal from "scrollreveal";
 
 import resume from "../../assets/resume.pdf";
 
 const About = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "left",
+      distance: "20px",
+      duration: 1000,
+      reset: true,
+    });
 
-  
+    sr.reveal(".about_container", { delay: 200 });
+    sr.reveal(".about_description", { delay: 400 });
+    sr.reveal(".button", { delay: 600 });
+  });
+
   return (
     <section className="about-section" id="about">
       <h2 className="about">About</h2>
